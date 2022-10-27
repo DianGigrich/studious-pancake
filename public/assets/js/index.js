@@ -3,6 +3,12 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
+const generateUniqueId = require('generate-unique-id');
+const randomId = generateUniqueId({
+  length: 3,
+  useLetters: false
+});
+
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -68,6 +74,7 @@ const renderActiveNote = () => {
 
 const handleNoteSave = () => {
   const newNote = {
+    id: randomId,
     title: noteTitle.value,
     text: noteText.value,
   };
@@ -102,7 +109,7 @@ const handleNoteView = (e) => {
   renderActiveNote();
 };
 
-// Sets the activeNote to and empty object and allows the user to enter a new note
+// Sets the activeNote to an empty object and allows the user to enter a new note
 const handleNewNoteView = (e) => {
   activeNote = {};
   renderActiveNote();
