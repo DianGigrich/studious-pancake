@@ -23,11 +23,13 @@ Enter nodemon server.js into the command line
       
 ## Screenshot
 ![screenshot of finished html](./Note%20Taker.png)
-[video link of demonstration](https://drive.google.com/file/d/1NUGnNAcRC5olsvvJZt3I9ZkebVoHf5i_/view)
 
-      
+# THIS IS A LINK THAT SHOWS THE DEPLOYED SITE FROM HEROKU, I sent the wrong one in bootcamp
+[video link of demonstration](https://drive.google.com/file/d/1GSGt_ewnctnsXEWsGFzDiWwKaqPiazNe/view)
+    https://shielded-beyond-30037.herokuapp.com/
+
 ## Credits
-Tucker from askBCS, but really I did it myself and for some reason it wasn't working at the time. Maybe I forgot to refresh the page or delete a bracket.
+Tucker from askBCS and Joe Rehfuss for being a great teacher.
 
 ## License
 This application is covered under the MIT license. See repo for license.
