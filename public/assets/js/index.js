@@ -3,11 +3,7 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
-const generateUniqueId = require('generate-unique-id');
-const randomId = generateUniqueId({
-  length: 3,
-  useLetters: false
-});
+
 
 
 if (window.location.pathname === '/notes') {
@@ -74,7 +70,6 @@ const renderActiveNote = () => {
 
 const handleNoteSave = () => {
   const newNote = {
-    id: randomId,
     title: noteTitle.value,
     text: noteText.value,
   };

@@ -1,7 +1,11 @@
 [
     {
+        "id": 123,
         "title": "Test Title",
         "text": "Test text"
     },
-    "[object Object]343"
+    {
+        "title": "asdf",
+        "text": "asdf"
+    }
 ]

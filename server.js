@@ -6,7 +6,11 @@ const fs = require("fs");
 const PORT = 3000;
 // process.env.PORT || 
 app.use(express.static("public"))
-
+const generateUniqueId = require('generate-unique-id');
+const randomId = generateUniqueId({
+  length: 3,
+  useLetters: false
+});
 
 
 
