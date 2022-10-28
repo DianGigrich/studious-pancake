@@ -3,8 +3,8 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const fs = require("fs");
-const PORT = 3000;
-// process.env.PORT || 
+const PORT = process.env.PORT || 3000;
+
 app.use(express.static("public"))
 const generateUniqueId = require('generate-unique-id');
 const randomId = generateUniqueId({
@@ -12,7 +12,6 @@ const randomId = generateUniqueId({
     useLetters: false,
     useNumbers: true
 });
-
 
 
 app.use(express.json());
@@ -31,7 +30,7 @@ app.get('/api/notes', (req, res) => {
         if (err) {
             console.log(err);
             res.status(500).json({
-                msg: "oh no!",
+                msg: "uh oh!",
                 err: err
             })
         } else {
@@ -40,13 +39,13 @@ app.get('/api/notes', (req, res) => {
         }
     })
 })
-
+// search specific notes, because why not
 app.get('/api/notes/:id', (req, res) => {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
         if (err) {
             console.log(err);
             res.status(500).json({
-                msg: "oh no!",
+                msg: "uh oh!",
                 err: err
             })
         } else {
@@ -59,7 +58,7 @@ app.get('/api/notes/:id', (req, res) => {
                 }
             }
             res.status(404).json({
-                msg: "book not found!"
+                msg: "note not found!"
             })
         }
     })
@@ -70,18 +69,19 @@ app.post('/api/notes/', (req, res) => {
         if (err) {
             console.log(err);
             res.status(500).json({
-                msg: "oh no!",
+                msg: "uh oh!",
                 err: err
             })
         } else {
             const dataArr = JSON.parse(data);
+            // add random id to new notes
             req.body.id = randomId;
             dataArr.push(req.body);
             fs.writeFile("./db/db.json", JSON.stringify(dataArr, null, 4), (err, data) => {
                 if (err) {
                     console.log(err);
                     res.status(500).json({
-                        msg: "oh no!",
+                        msg: "uh oh!",
                         err: err
                     })
                 }
@@ -95,9 +95,8 @@ app.post('/api/notes/', (req, res) => {
     })
 })
 
-// app.delete('/user', (req, res) => {
-//     res.send('Got a DELETE request at /user')
-// })
+
+// delete notes
 app.delete('/api/notes/:id', (req, res) => {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
         if (err) {
