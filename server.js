@@ -124,72 +124,7 @@ app.post('/api/notes/',(req,res)=>{
 //         }
 //     })
 // })
-// app.get('/api/patrons',(req,res)=>{
-//     fs.readFile("./db/patrons.json","utf-8",(err,data)=>{
-//         if(err){
-//             console.log(err);
-//             res.status(500).json({
-//                 msg:"oh no!",
-//                 err:err
-//             })
-//         } else {
-//             const dataArr = JSON.parse(data);
-//             res.json(dataArr)
-//         }
-//     })
-// })
 
-// app.get('/api/patrons/:id',(req,res)=>{
-//     fs.readFile("./db/patrons.json","utf-8",(err,data)=>{
-//         if(err){
-//             console.log(err);
-//             res.status(500).json({
-//                 msg:"oh no!",
-//                 err:err
-//             })
-//         } else {
-//             const dataArr = JSON.parse(data);
-//             console.log(req.params.id);
-//             for (let i = 0; i < dataArr.length; i++) {
-//                 const patron = dataArr[i];
-//                 if(patron.id==req.params.id) {
-//                     return res.json(patron)
-//                 }
-//             }
-//             res.status(404).json({
-//                 msg:"patron not found!"
-//             })
-//         }
-//     })
-// })
-// app.post('/api/patrons/',(req,res)=>{
-//     fs.readFile("./db/patrons.json","utf-8",(err,data)=>{
-//         if(err){
-//             console.log(err);
-//             res.status(500).json({
-//                 msg:"oh no!",
-//                 err:err
-//             })
-//         } else {
-//             const dataArr = JSON.parse(data);
-//             dataArr.push(req.body);
-//             fs.writeFile("./db/patrons.json",JSON.stringify(dataArr,null,4),(err,data)=>{
-//                 if(err){
-//                     console.log(err);
-//                     res.status(500).json({
-//                         msg:"oh no!",
-//                         err:err
-//                     })
-//                 }
-//                 else {
-//                     res.json({
-//                         msg:"successfully added!"
-//                     })
-//                 }
-//             })
-//         }
-//     })
-// })
 
 
 app.get('*',(req,res)=>{
