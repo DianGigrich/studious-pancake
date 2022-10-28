@@ -2,6 +2,7 @@
 # Express.js: Note Taker
 
 ## Description
+aka studious-pancake
 This is a note-taking app that saves information in an api.
 
 ## Table of Contents
@@ -15,18 +16,18 @@ This is a note-taking app that saves information in an api.
 * [Questions](#questions)
       
 ## Installation
-npm init, npm install, inquirer, fs, express all utilized
+npm init, npm install, inquirer, fs, express, generate-unique-id will be utilized
       
 ## Usage
 Enter nodemon server.js into the command line
       
 ## Screenshot
-![screenshot of finished html](./My%20Team.png)
-[video link of demonstration](https://drive.google.com/file/d/1liHWlfVAwaOyradGVmqL0WwOjY2cN7wX/view)
+![screenshot of finished html](./Note%20Taker.png)
+[video link of demonstration](https://drive.google.com/file/d/1NUGnNAcRC5olsvvJZt3I9ZkebVoHf5i_/view)
 
       
 ## Credits
-Tucker from askBCS
+Tucker from askBCS, but really I did it myself and for some reason it wasn't working at the time. Maybe I forgot to refresh the page or delete a bracket.
 
 ## License
 This application is covered under the MIT license. See repo for license.
@@ -41,5 +42,4 @@ This application is covered under the MIT license. See repo for license.
 ## Questions
 [Link to diangigrich's GitHub](https://github.com/diangigrich)
 
-[Contact Us](mailto:slayer_barrett_@hotmail.com)# studious-pancake
-Express.js: Note Taker
+[Contact Us](mailto:slayer_barrett_@hotmail.com)
